@@ -7,7 +7,6 @@ This repository contains a Maven-based Java web application designed to demonstr
 - Deployment: Simple deployment to any compatible web server (e.g., Tomcat, Jetty).
 - Unit Testing: Configured with JaCoCo for code coverage reporting.
 
-# Getting Started
 
 # Prerequisites
 
