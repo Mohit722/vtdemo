@@ -1,4 +1,5 @@
-# Maven Java Application: This repository contains a Maven-based Java web application designed to demonstrate best practices in building, deploying, and testing a web application.
+# Maven Java Application: 
+This repository contains a Maven-based Java web application designed to demonstrate best practices in building, deploying, and testing a web application.
 
 # Features
 
