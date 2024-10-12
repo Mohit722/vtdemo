@@ -62,6 +62,39 @@ mvn test
 
 The test results and coverage reports will be available in the `target/site/jacoco` directory.
 
+To enhance the documentation for SonarQube integration in your Java Maven project, you can add a section explaining the following steps:
+
+
+# SonarQube Configuration
+
+1. Update the `pom.xml` for SonarQube:
+   - After cloning the repository, open the `pom.xml` file and modify the SonarQube properties:
+     ```xml
+     <properties>
+         <sonar.host.url>http://<SonarQube_Server_IP>:9000</sonar.host.url>
+         <sonar.projectKey>YourProjectKey</sonar.projectKey>
+         <sonar.login>your-sonarqube-token</sonar.login>
+     </properties>
+     ```
+   - Replace `<SonarQube_Server_IP>` with your SonarQube server's IP or URL.
+   - Update `YourProjectKey` with a unique key for your project. This key is used to identify your project in SonarQube.
+
+2. Configure SonarQube Token in Jenkins:
+   - Instead of hardcoding the SonarQube token in the `pom.xml` (which is a security risk), add the token as a Jenkins credential.
+   - Use Jenkins credentials (like `DemoSonarqube`) within your pipeline to securely reference the token. This setup prevents exposing sensitive information in your code.
+
+3. Modify Jenkins Pipeline:
+   - In the Jenkins pipeline, use the credentials ID to access the SonarQube token dynamically:
+     ```groovy
+     withCredentials([string(credentialsId: 'DemoSonarqube', variable: 'SONAR_TOKEN')]) {
+         sh 'mvn sonar:sonar -Dsonar.login=$SONAR_TOKEN'
+     }
+     ```
+   - This approach ensures the SonarQube token is used securely during the analysis phase.
+
+Adding this thing we are configuring SonarQube properly while emphasizing the importance of secure practices in Jenkins. 
+
+
 # Conclusion
 
 Feel free to explore and enhance the application as needed. Contributions and feedback are welcome!
