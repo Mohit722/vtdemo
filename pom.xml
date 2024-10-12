@@ -20,7 +20,6 @@
     <!-- SonarQube Properties -->
     <sonar.host.url>http://13.232.95.253:9000</sonar.host.url>
     <sonar.projectKey>vtdemo</sonar.projectKey>
-    <sonar.login>sqa_2c0a4b32e85795ebded8574c49002c49b0bce539</sonar.login>
   </properties>
 
   <dependencies>
