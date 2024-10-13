@@ -18,7 +18,7 @@
     <maven.compiler.target>8</maven.compiler.target>
     
     <!-- SonarQube Properties -->
-    <sonar.host.url>http://13.232.95.253:9000</sonar.host.url>
+    <sonar.host.url>http://13.201.121.106:9000</sonar.host.url>
     <sonar.projectKey>vtdemo</sonar.projectKey>
   </properties>
 
